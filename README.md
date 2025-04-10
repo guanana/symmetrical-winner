@@ -25,7 +25,7 @@ terraform apply
 
 ### Login to GKE
 ```shell
-gcloud container clusters get-credentials <<gke_name>> --zone us-central1-c --project <<gcp_project_name>>
+gcloud container clusters get-credentials `terraform output -raw gke_name` --zone us-central1-c --project `terraform output -raw gcp_project_name`
 ```
 ### Bootstrap flux
 **Make sure you have `GITHUB_USER` and `GITHUB_TOKEN` set as env variables** (you can create a .env.secrets file)
