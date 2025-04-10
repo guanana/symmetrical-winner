@@ -42,7 +42,8 @@ spec:
             spec:
               securityContext:
                 runAsUser: 100
-                fsGroup: 100
+                runAsGroup: 101
+                fsGroup: 101
               volumes:
                 - name: data
                   ephemeral:
