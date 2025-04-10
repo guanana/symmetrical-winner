@@ -5,6 +5,7 @@ metadata:
   name: pd-standard
 provisioner: pd.csi.storage.gke.io
 volumeBindingMode: WaitForFirstConsumer
+reclaimPolicy: Retain
 allowVolumeExpansion: true
 parameters:
   type: pd-standard
